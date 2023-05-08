@@ -13,28 +13,9 @@ namespace ConsoleAppCshap
 
         static void Main(string[] args)
         {
-            
-            int n = 10, m = 100, k = 250;
-            Console.WriteLine("Tong hai so m va n la: " + Add(n,m));
-            Console.WriteLine("Gia tri nho nhat trong 3 so la" + Min(n,m,k));
 
-            double d = 1 / 2;
-            Console.WriteLine(d);
-
-            Console.WriteLine(new string('=', 50));
-            //Input value from keyboard
-            Console.Write("Nhap tham so a = ");
-            int a = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Nhap tham so b = ");
-            int b = Convert.ToInt32(Console.ReadLine());
-
-
-            Console.Write("Nhap tham so c = ");
-            int c = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine();
-
-            GiaiPhuongTrinhBacHai(a, b, c);
+            int n = 6;
+            Console.WriteLine("Giai thua cua n la:" + GiaiThua(n));
 
 
             Console.ReadLine();
@@ -93,7 +74,18 @@ namespace ConsoleAppCshap
 
         }
 
-
+        /*Tinh n!*/
+        public static int GiaiThua(int n)
+        {
+            if (n == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return n * GiaiThua(n - 1);
+            }
+        }
 
     }
 }
