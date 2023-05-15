@@ -3,7 +3,7 @@ namespace ConsoleAppOOP
 {
     public class Student
     {
-        //1. fields
+        //1. fields/data
         private int id;
         private string fullName;
 
@@ -14,11 +14,29 @@ namespace ConsoleAppOOP
         public string Address;
         public double Mark;
 
+        //3.constructor
+        public Student()
+        {
+            id = 1;
+            Mark = .5;
+        }
+
+        public Student(int id, string fullName, string address, double mark)
+        {
+            this.id = id;
+            this.fullName = fullName;
+            Address = address;
+            Mark = mark;
+        }
+
+
         //ham
         public void Display()
         {
-            Console.WriteLine($"Id = {Id}, Fullname is: {FullName}, " +
-                $"Address: {Address} and Mark: {Mark}");  
+            Console.WriteLine(calcInfor());  
         }
+        //expression bodied/lambda/arrow 
+        private string calcInfor() => $"Id = {this.id}, Fullname is: {FullName}, " + $"Address: {Address} and Mark: {Mark}";
+
     }
 }
