@@ -1,0 +1,12 @@
+﻿Viet mot chuong trinh quan ly sinh vien. 
+	1. Cho phep them sinh vien
+	2. Cho phep update thong tin mot sinh vien bat ky
+	3. Cho phep xoa mot sinh vien bat ky
+	4. Cho phep sap xep tang dan theo diem (Mark) cua tat ca SV 
+	trong lop do
+	5. Hien thi thong tin SV ra man hinh
+
+Hint:
+	- Dung mang 1 chieu trong C# de thuc thi
+	- Giai thuat sap xep ta co the chon 1 giai thuat bat ky
+	(Selection sort, merge sort...)
