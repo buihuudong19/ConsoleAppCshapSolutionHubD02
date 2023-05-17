@@ -33,12 +33,20 @@ namespace ConsoleAppOOP
 
         }
         //2. Lay ra 1 sinh vien theo Id nao do
-        /*
+        
         public Student GetStudentById(int id)
         {
-
+            foreach(Student s in this.students)
+            {
+                if (s is not null)
+                {
+                    if (s.Id.Equals(id)) return s;
+                    
+                }
+            }
+            return null;
         }
-        */
+        
         //3. hien thi toan bo thong tin sinh vien ra man hinh
         public void ShowAllStudent()
         {

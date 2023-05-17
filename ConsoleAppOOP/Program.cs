@@ -34,9 +34,6 @@ namespace ConsoleAppOOP
             Console.ReadLine();
 
 
-
-
-
         }
     }
 }
