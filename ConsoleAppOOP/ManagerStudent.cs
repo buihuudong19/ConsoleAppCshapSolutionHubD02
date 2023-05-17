@@ -80,6 +80,29 @@ namespace ConsoleAppOOP
             return students;
         }
         //5. tim kiem nhi phan
+        public int BinarySearch(Student student)
+        {
+            int left = 0;
+            int right = size - 1;
+            while (left <= right)
+            {
+                int middle = (left + right) / 2;
+                int comparison = students[middle].Id.CompareTo(student.Id);
+                if (comparison == 0)
+                {
+                    return middle;
+                }
+                else if (comparison < 0)
+                {
+                    left = middle + 1;
+                }
+                else
+                {
+                    right = middle - 1;
+                }
+            }
+            return -1;
+        }
 
 
     }

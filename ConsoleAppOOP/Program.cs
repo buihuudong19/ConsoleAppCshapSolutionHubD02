@@ -41,6 +41,10 @@ namespace ConsoleAppOOP
             managerStudent.SortArray();
             managerStudent.ShowAllStudent();
 
+            Console.WriteLine("================Search Student===========================");
+            int index=  managerStudent.BinarySearch(s3);
+            Console.WriteLine($"ket qua tim: {index}");
+
 
 
             Console.ReadLine();
