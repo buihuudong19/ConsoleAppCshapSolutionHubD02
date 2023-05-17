@@ -58,6 +58,28 @@ namespace ConsoleAppOOP
                 }
             }
         }
+        //4. sap xep tang dan theo diem
+        public Student[] SortArray()
+        {
+           
+
+            for (int i = 0; i < this.size - 1; i++)
+            {
+                int smallestVal = i; //index cua vi tri ma Student co Mark nho nhat.
+                for (int j = i + 1; j < this.size; j++)
+                {
+                    if (students[j].Mark < students[smallestVal].Mark)
+                    {
+                        smallestVal = j;
+                    }
+                }
+                Student tempVar = students[smallestVal];
+                students[smallestVal] = students[i];
+                students[i] = tempVar;
+            }
+            return students;
+        }
+        //5. tim kiem nhi phan
 
 
     }

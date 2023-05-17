@@ -38,5 +38,7 @@ namespace ConsoleAppOOP
         //expression bodied/lambda/arrow 
         private string calcInfor() => $"Id = {this.id}, Fullname is: {FullName}, " + $"Address: {Address} and Mark: {Mark}";
 
+        public override string ToString() => calcInfor();
+
     }
 }
