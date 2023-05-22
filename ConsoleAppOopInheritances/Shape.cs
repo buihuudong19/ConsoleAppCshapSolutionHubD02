@@ -23,6 +23,11 @@ namespace ConsoleAppOopInheritances
 
         public override string ToString()
         {
+            return getInfor();
+        }
+
+        private string getInfor()
+        {
             return $"Color = {Color} and Date Create:{DateCreate}";
         }
 
