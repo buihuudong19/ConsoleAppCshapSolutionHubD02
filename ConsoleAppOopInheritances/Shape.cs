@@ -14,6 +14,8 @@ namespace ConsoleAppOopInheritances
 
         public Shape()
         {
+            Color = "Green";
+            DateCreate = DateTime.Now;
         }
         public Shape(string color, DateTime dateCreate)
         {
