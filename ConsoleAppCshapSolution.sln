@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppCshap", "ConsoleAppCshap\ConsoleAppCshap.csproj", "{5C89CCDF-4FD4-40CE-948F-007C71A3815B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppOOP", "ConsoleAppOOP\ConsoleAppOOP.csproj", "{96659037-FF06-4342-A28E-82FD75E83B06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppOOP", "ConsoleAppOOP\ConsoleAppOOP.csproj", "{96659037-FF06-4342-A28E-82FD75E83B06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppOopInheritances", "ConsoleAppOopInheritances\ConsoleAppOopInheritances.csproj", "{B9609739-7A3B-484F-9DE0-3767349E2723}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{96659037-FF06-4342-A28E-82FD75E83B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96659037-FF06-4342-A28E-82FD75E83B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96659037-FF06-4342-A28E-82FD75E83B06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9609739-7A3B-484F-9DE0-3767349E2723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9609739-7A3B-484F-9DE0-3767349E2723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9609739-7A3B-484F-9DE0-3767349E2723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9609739-7A3B-484F-9DE0-3767349E2723}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
