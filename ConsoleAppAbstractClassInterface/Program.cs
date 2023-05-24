@@ -9,7 +9,10 @@ namespace ConsoleAppAbstractClassInterface
             AbsShape s = new Rectangle(150,50);
             s.Color = "Green";
 
-            Console.WriteLine(s);
+            Circle c = new Circle(123.7);
+            IShape c1 = new Circle(123.7);
+            
+            Console.WriteLine(c);
         }
     }
 }
