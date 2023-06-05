@@ -219,6 +219,7 @@ namespace WinFormsAppHR
             this.dgvEmployees.RowTemplate.Height = 25;
             this.dgvEmployees.Size = new System.Drawing.Size(806, 259);
             this.dgvEmployees.TabIndex = 12;
+            this.dgvEmployees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployees_CellContentClick);
             // 
             // groupBox2
             // 

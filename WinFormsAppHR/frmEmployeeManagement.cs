@@ -23,6 +23,7 @@ namespace WinFormsAppHR
             InitializeComponent();
             repoEmployee = new RepoEmployee();
             repoDepartment = new RepoDepartment();
+            dgvEmployees.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -63,8 +64,9 @@ namespace WinFormsAppHR
                 /*binding data*/
                 txtEmployeeId.DataBindings.Clear();
                 txtEmployeeName.DataBindings.Clear();
-                //cboDepartment.SelectedIndex = 0;
+                cboDepartment.SelectedIndex = 0;
                 mskSalary.DataBindings.Clear();
+                dtDob.DataBindings.Clear();
 
 
                 txtEmployeeId.DataBindings.Add("text", source, "Id");
@@ -74,15 +76,30 @@ namespace WinFormsAppHR
                 dtDob.DataBindings.Add("text", source, "Dob");
 
 
+                
+
+               
+
+
 
                 dgvEmployees.DataSource = null;
                 dgvEmployees.DataSource = source;
 
-            }catch (Exception ex)
+                //var index = dgvEmployees.CurrentRow.Index;
+
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }
 
+        }
+
+        private void dgvEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var index = dgvEmployees.CurrentRow.Index;
+            int selectedIndex = (int)dgvEmployees.Rows[index].Cells[5].Value;
+            cboDepartment.SelectedIndex = selectedIndex-1;  
         }
     }
 }
