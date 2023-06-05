@@ -13,22 +13,22 @@ namespace EmployeeRepository.Entities
         public DateTime Dob { get; set; }
         public double Salary { get; set; }
         public bool Sex { get; set; } = true;// true: name else false
-        public Department Department {get;set;}
+        public int DepartmentId {get;set;}
 
-        public Employee(int id, string name, DateTime dob, double salary, bool sex, Department department)
+        public Employee(int id, string name, DateTime dob, double salary, bool sex, int departmentId)
         {
             Id = id;
             Name = name;
             Dob = dob;
             Salary = salary;
             Sex = sex;
-            Department = department;
+            DepartmentId = departmentId;
         }
 
         public override string ToString()
         {
             return $"Id: {Id}, Employee Name: {Name}" +
-                $" Dob: {Dob}, Salary: {Salary}, Sex: {Sex} and Department: {Department}";
+                $" Dob: {Dob}, Salary: {Salary}, Sex: {Sex} and DepartmentId: {DepartmentId}";
         }
     }
 }

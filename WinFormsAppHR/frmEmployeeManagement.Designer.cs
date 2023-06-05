@@ -51,12 +51,7 @@ namespace WinFormsAppHR
         IRepoDepartment repoDepartment;
         private void InitializeComponent()
         {
-            this.repoDepartment = new RepoDepartment();
             this.cboDepartment = new System.Windows.Forms.ComboBox();
-            this.cboDepartment.Items.AddRange(this.repoDepartment.GetDepartments());
-            this.cboDepartment.SelectedIndex = 0;
-
-
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmployeeId = new System.Windows.Forms.TextBox();
@@ -64,7 +59,6 @@ namespace WinFormsAppHR
             this.label3 = new System.Windows.Forms.Label();
             this.dtDob = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radFermale = new System.Windows.Forms.RadioButton();
@@ -81,6 +75,16 @@ namespace WinFormsAppHR
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // cboDepartment
+            // 
+            this.cboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDepartment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboDepartment.FormattingEnabled = true;
+            this.cboDepartment.Location = new System.Drawing.Point(606, 82);
+            this.cboDepartment.Name = "cboDepartment";
+            this.cboDepartment.Size = new System.Drawing.Size(200, 28);
+            this.cboDepartment.TabIndex = 7;
             // 
             // label1
             // 
@@ -145,16 +149,6 @@ namespace WinFormsAppHR
             this.label4.Size = new System.Drawing.Size(80, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Phòng ban";
-            // 
-            // cboDepartment
-            // 
-            this.cboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDepartment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cboDepartment.FormattingEnabled = true;
-            this.cboDepartment.Location = new System.Drawing.Point(606, 82);
-            this.cboDepartment.Name = "cboDepartment";
-            this.cboDepartment.Size = new System.Drawing.Size(200, 28);
-            this.cboDepartment.TabIndex = 7;
             // 
             // label5
             // 
@@ -247,6 +241,7 @@ namespace WinFormsAppHR
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnUpdate
             // 
@@ -300,6 +295,7 @@ namespace WinFormsAppHR
             this.Name = "frmEmployeeManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ thống quản lý nhân viên HUB";
+            this.Load += new System.EventHandler(this.frmEmployeeManagement_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();
