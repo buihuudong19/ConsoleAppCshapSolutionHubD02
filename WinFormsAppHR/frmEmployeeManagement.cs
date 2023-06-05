@@ -9,17 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using EmployeeRepository.Repository;
+using EmployeeRepository.Entities;
 
 namespace WinFormsAppHR
 {
     public partial class frmEmployeeManagement : Form
     {
         private IRepoEmployee repoEmployee;
+        private IRepoDepartment repoDepartment;
         private BindingSource source = null;    
         public frmEmployeeManagement()
         {
             InitializeComponent();
             repoEmployee = new RepoEmployee();
+            repoDepartment = new RepoDepartment();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -35,7 +38,9 @@ namespace WinFormsAppHR
 
         private void frmEmployeeManagement_Load(object sender, EventArgs e)
         {
-           
+            Department[] departments = repoDepartment.GetDepartments();
+            this.cboDepartment.Items.AddRange(departments);
+            this.cboDepartment.SelectedIndex = 0;
             _LoadDataToGrid();
         }
 
@@ -44,10 +49,30 @@ namespace WinFormsAppHR
         {
             //1. Lay du lieu tu API (Repo)
             var emps = repoEmployee.GetAllEmployees();
+            
+
             try
             {
+
                 source = new BindingSource();
                 source.DataSource = emps;
+
+
+
+
+                /*binding data*/
+                txtEmployeeId.DataBindings.Clear();
+                txtEmployeeName.DataBindings.Clear();
+                //cboDepartment.SelectedIndex = 0;
+                mskSalary.DataBindings.Clear();
+
+
+                txtEmployeeId.DataBindings.Add("text", source, "Id");
+                txtEmployeeName.DataBindings.Add("text", source, "Name");
+                radFermale.DataBindings.Add("checked", source, "Sex");
+                mskSalary.DataBindings.Add("text", source, "Salary");
+                dtDob.DataBindings.Add("text", source, "Dob");
+
 
 
                 dgvEmployees.DataSource = null;

@@ -48,7 +48,7 @@ namespace WinFormsAppHR
         ///  the contents of this method with the code editor.
         /// </summary>
         /// 
-        IRepoDepartment repoDepartment;
+        
         private void InitializeComponent()
         {
             this.cboDepartment = new System.Windows.Forms.ComboBox();

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EmployeeRepository
+namespace EmployeeRepository.Entities
 {
     public class Department
     {
